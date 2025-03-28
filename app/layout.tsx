@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import React from 'react';
 import { Nunito } from "next/font/google";
-import Header from "@/components/shared/header";
+import { Header } from "@/components/shared/header";
 import "./globals.css";
 
 const nunito = Nunito({
