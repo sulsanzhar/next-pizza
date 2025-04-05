@@ -1,7 +1,7 @@
-import React, { ButtonHTMLAttributes } from 'react';
+import React from 'react';
 import { Checkbox } from '../ui/checkbox';
 
-export interface TProps {
+export interface IFilterCheckboxProps {
     text: string;
     value: string;
     endAdornment?: React.ReactNode;
@@ -9,7 +9,7 @@ export interface TProps {
     checked?: boolean;
 }
 
-export const FilterCheckbox: React.FC<TProps> = ({
+export const FilterCheckbox: React.FC<IFilterCheckboxProps> = ({
                                                                  text,
                                                                  value,
                                                                  endAdornment,

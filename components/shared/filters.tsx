@@ -1,6 +1,8 @@
+"use client";
+
 import { cn } from "@/lib/utils";
-import {Title, FilterCheckbox, RangeSlider} from "../shared";
-import {Input} from "@/components/ui";
+import {Title, FilterCheckbox, RangeSlider, CheckboxFiltersGroup} from "../shared";
+import { Input } from "@/components/ui";
 
 interface TProps {
     className?: string;
@@ -13,7 +15,7 @@ export const Filters = ({className}: TProps) => {
 
             <div className="flex flex-col gap-4">
                 <FilterCheckbox  text={"Можно собирать"} value="1" />
-                <FilterCheckbox   text={"Новинки"} value="1" />
+                <FilterCheckbox   text={"Новинки"} value="2" />
             </div>
 
             <div className="mt-5 border-y border-y-neutral-100 py-6 pb-7">
@@ -25,6 +27,40 @@ export const Filters = ({className}: TProps) => {
 
                 <RangeSlider  min={0} max={5000} step={10} value={[0, 1000]}/>
             </div>
+
+            <CheckboxFiltersGroup
+                title="Ингредиенты"
+                className="mt-5"
+                limit={6}
+                defaultItems={[
+                    { text: 'Сырный соус', value: '1' },
+                    { text: 'Моццарелла', value: '2' },
+                    { text: 'Чеснок', value: '3' },
+                    { text: 'Солённые огурчики', value: '4' },
+                    { text: 'Красный лук', value: '5' },
+                    { text: 'Томаты', value: '6' },
+                    { text: 'Сырный соус', value: '1' },
+                    { text: 'Моццарелла', value: '2' },
+                    { text: 'Чеснок', value: '3' },
+                    { text: 'Солённые огурчики', value: '4' },
+                    { text: 'Красный лук', value: '5' },
+                    { text: 'Томаты', value: '6' }
+                ]}
+                items={[
+                    { text: 'Сырный соус', value: '1' },
+                    { text: 'Моццарелла', value: '2' },
+                    { text: 'Чеснок', value: '3' },
+                    { text: 'Солённые огурчики', value: '4' },
+                    { text: 'Красный лук', value: '5' },
+                    { text: 'Томаты', value: '6' },
+                    { text: 'Сырный соус', value: '1' },
+                    { text: 'Моццарелла', value: '2' },
+                    { text: 'Чеснок', value: '3' },
+                    { text: 'Солённые огурчики', value: '4' },
+                    { text: 'Красный лук', value: '5' },
+                    { text: 'Томаты', value: '6' }
+                ]}
+            />
         </div>
     );
 };
